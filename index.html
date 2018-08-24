@@ -1,8 +1,10 @@
 <!doctype html>
-<html>
+<html lang="jp">
 	<head>
 		<meta charset="utf-8">
-		<meta name="Yakumo" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewpoint" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Yakumo Fujimoto">
+    <meta name="desctiption" content="Sample slide of reveal.js">
 
 		<title>reveal.jsスライド</title>
 
@@ -24,7 +26,13 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown="mdslides/sample.md" data-separator="^\n---\n$" data-separator-vertical="^\n>>>\n$" data-transition="default" data-background-transition="slide"></section>
+				<section 
+          data-markdown="mdslides/sample.md" 
+          data-separator="^\n---\n$" 
+          data-separator-vertical="^\n>>>\n$" 
+          data-transition="default" 
+          data-background-transition="slide"
+        ></section>
 			</div>
 		</div>
 
@@ -36,13 +44,22 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+
+        math: {
+          mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+          config: 'TeX-AMS_HTML-full'
+        },
+
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+          // Mathjax
+          { src: 'plugin/math/math.js', async: true }
+        ]
 			});
 		</script>
-	</body>
+ 	</body>
 </html>

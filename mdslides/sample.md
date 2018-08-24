@@ -1,8 +1,15 @@
 Tokyo Tech
+<div style="text-align:center;">
+  <img src="./images/fig99.png" style="width:50%;"/>
+<div>
 
 ---
 
 ちがう未来を見つめてく．
+
+$$
+  F(u) = \int\_{-\infty}^{\infty} f(x) \mathrm{e}^{-j2\pi ux}dx
+$$
 
 >>>
 
